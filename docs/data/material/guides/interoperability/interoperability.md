@@ -860,3 +860,7 @@ it's a peer dependency of `@mui/material`.
 Material UI and TSS runs emotion 11 so there is [some changes](https://github.com/InseeFrLab/onyxia-ui/blob/324de62248074582b227e584c53fb2e123f5325f/.storybook/main.js#L31-L32)
 to be made to your `.storybook/main.js` to make it uses emotion 11.
 :::
+
+Support for ListItem with tailwind css
+because the Drawer mounts its component outside the scope of "#__next" id for it to support tailwind css you will need to add a id to the Box and add that id to the 
+important: ['#__next', 'box1'], in tailwind.config.js. then the drawer will show tailwind css changed
